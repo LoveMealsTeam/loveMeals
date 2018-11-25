@@ -1,0 +1,46 @@
+/*  初始化样式  */
+html{
+    font-size: 13.333vw;
+    /*
+        1rem = 100px
+        0.1rem = 10px
+        以此类推...
+     */
+}
+body{
+    font-size: 12px;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    border: none;
+}
+
+
+/* flexBox */
+.flex-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+.jus-a{
+    justify-content: space-around;
+}
+.jus-b{
+    justify-content: space-between;
+}
+.ite-c{
+    align-items: center;
+}
+
