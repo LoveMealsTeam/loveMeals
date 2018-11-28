@@ -6,7 +6,7 @@ class Reg extends Component {
     render() {
         return (
             <div>
-                注册2
+                注册
                 {/*<Button className="btn" type="primary">primary 按钮</Button>*/}
             </div>
         );
