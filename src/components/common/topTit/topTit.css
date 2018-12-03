@@ -7,11 +7,11 @@
     font-size: 14px;
     border-bottom: 1px solid #ccc;
 }
-.back,.add{
+.topTit .back,.topTit .add{
     width: 1rem;
     height: 100%;
 }
-.title{
+.topTit .title{
     position: absolute;
     top: 50%;
     left: 50%;

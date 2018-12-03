@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 
 import './set.css';
 import TopTit from "../common/topTit/topTit";
-import {Button} from "antd-mobile";
+import BotNav from "../botNav/botNav";
 
-import {BrowserRouter as Router,Route,Link} from 'react-router-dom';
+import {Button} from "antd-mobile";
+import {BrowserRouter as Router,Link} from 'react-router-dom';
 
 class Set extends Component {
     constructor(props) {
@@ -51,6 +52,9 @@ class Set extends Component {
 
                 {/* 退出登录 */}
                 <Button className="btn outLogin" type="primary">退出登录</Button>
+
+                {/* 底部导航 */}
+                <BotNav/>
             </div>
         );
     }

@@ -29,7 +29,7 @@ class PeopleList extends Component {
     render() {
         const state = this.state;
         return (
-            <div>
+            <div className={'peopleList'}>
                 {/* 顶部标题 */}
                 <TopTit
                     title={this.props.title}
