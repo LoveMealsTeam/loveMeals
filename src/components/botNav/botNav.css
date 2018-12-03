@@ -1,0 +1,33 @@
+a.home{
+    display: block;
+    padding:10px;
+    margin: auto;
+    width:0.7rem;
+    color:skyblue;
+
+
+}
+body{
+    background: url("../../static/images/zac.jpg") 0 0 /100%;
+}
+a.home>span{
+    font-size: 0.2rem;
+}
+a.home>i{
+    width:100%;
+    margin:0.2rem auto;
+    font-size: 0.5rem;
+}
+.bottom-nav{
+    position: fixed;
+    z-index: 999;
+    width:100%;
+    bottom: 0;
+    background: rgb(252,252,252);
+    border-top:1px solid #ccc;
+
+}
+.bottom-nav>li{
+    width:50%;
+    float: left;
+}

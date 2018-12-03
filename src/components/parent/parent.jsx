@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import TopTit from "../common/topTit/topTit";
-import Parent from './parentCol/parentCol'
+import ParentCol from './parentCol/parentCol'
 
 
 class Parent extends Component {
@@ -14,7 +14,7 @@ class Parent extends Component {
                 />
 
                 {/* 列表 */}
-                <Parent/>
+                <ParentCol/>
             </div>
         );
     }
