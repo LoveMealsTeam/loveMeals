@@ -7,6 +7,8 @@ import {routes} from "./router/router";
 //components
 import Main from "./components/main/main";
 
+import zzwse from "./static/js/zzwse.js";
+
 
 class App extends Component {
   render() {
@@ -35,6 +37,8 @@ class App extends Component {
                            path={item.path}
                            exact={item.exact}
                            component={item.componet}
+                           title={item.title}
+                           zzwse={zzwse}
                        />
                    )
                 })

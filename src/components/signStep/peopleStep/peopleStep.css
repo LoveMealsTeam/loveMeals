@@ -1,0 +1,14 @@
+.phone{
+    color:blue;
+}
+
+.liststep li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0.3rem 0.2rem 0.7rem;
+    background: #fff;
+    font-size: 14px;
+}
+.liststep li+li{
+    border-top: 1px solid #f5f5f5;
+}

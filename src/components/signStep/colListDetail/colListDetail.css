@@ -1,0 +1,24 @@
+.ColListDetail{
+    background: #fff;
+}
+.ColListDetail li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    font-size: 14px;
+}
+.ColListDetail li+li{
+    border-top: 1px solid #ccc;
+}
+.know{
+    width: 0.8rem;
+    height: 0.8rem;
+    color:red;
+    text-align: center;
+    line-height: 0.8rem;
+    border:1px solid red;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}

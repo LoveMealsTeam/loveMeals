@@ -1,0 +1,17 @@
+.ColList{
+    background: #fff;
+}
+.ColList li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    font-size: 14px;
+}
+.ColList li+li{
+    border-top: 1px solid #ccc;
+}
+.delete{
+    height: 0.5rem;
+    color:red;
+}

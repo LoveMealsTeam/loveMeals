@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const zzwse = {
+const zzwse = {
     //后端服务器地址
-    server_base:'',
+    server_base:'http://47.106.214.75:3000',
 
     /**
      *  @param 登陆key
@@ -18,16 +18,17 @@ export const zzwse = {
      * @param success/err 成功失败回调
      * @return  无
      */
-    axios:function({type='get',url,data,success,err}){
-        let type = type.toLowerCase(),
-            server_base = this.server_base;
+    ajax:function({type,url,data,success,err}){
+        let server_base = zzwse.server_base;
 
-        axios[type](server_base+url, data)
+        const ajax=axios[type];
+
+        ajax(server_base+url, data)
             .then(function (response) {
-                success && success(response);
+                success && success(response.data);
             })
             .catch(function (response) {
-                err && err(response);
+                err && err(response.data);
             });
     },
 
@@ -43,7 +44,7 @@ export const zzwse = {
      *  @return 无
      * */
     setCookie:function(Json){
-        for(key in Json){
+        for(let key in Json){
             var d = new Date();
             d.setDate( d.getDate()+5 );
             document.cookie = key+'='+Json[key]+'; expires='+d.toUTCString();
@@ -58,9 +59,9 @@ export const zzwse = {
      *  @return {age:18,name:'zzw'}
      * */
     getCookie:function(){
-        var cookie = document.cookie;
-        var result = {};
-        for(key in arguments){
+        let cookie = document.cookie;
+        let result = {};
+        for(let key in arguments){
             var val = '\\b'+arguments[key]+'=(\\w*)+';
             var reg =new RegExp(val,'i');
             val = reg.exec(cookie);
@@ -76,10 +77,10 @@ export const zzwse = {
      *  @return 无
      * */
      removeCookie:function(){
-        for(key in arguments){
+        for(let key in arguments){
             var json ={};
             json[arguments[key]]=null;
-            setCookie(json,-1);
+            zzwse.setCookie(json,-1);
         }
     },
 
@@ -116,7 +117,7 @@ export const zzwse = {
      *  @return 无
      * */
     login:function(phoneNum){
-        this.setCookie(this.key_login_user,phoneNum);
+        zzwse.setCookie(zzwse.key_login_user,phoneNum);
     },
 
     /**
@@ -124,7 +125,7 @@ export const zzwse = {
      * @return 无
      * */
     loginOut:function(){
-        this.removeCookie(this.key_login_user);
+        zzwse.removeCookie(zzwse.key_login_user);
     },
 
     /**
@@ -132,6 +133,9 @@ export const zzwse = {
      *  @return boolean
      * */
     isLogin:function () {
-        return this.getCookie(this.key_login_user)?true:false;
+        return zzwse.getCookie(zzwse.key_login_user)?true:false;
     }
-}
+};
+
+
+export default zzwse;

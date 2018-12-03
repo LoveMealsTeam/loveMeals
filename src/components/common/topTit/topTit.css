@@ -1,0 +1,24 @@
+.topTit{
+    background: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 33;
+    height: 1rem;
+    font-size: 14px;
+    border-bottom: 1px solid #ccc;
+}
+.back,.add{
+    width: 1rem;
+    height: 100%;
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    font-weight: bold;
+}

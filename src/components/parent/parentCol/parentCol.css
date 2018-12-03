@@ -1,0 +1,13 @@
+.ParentCol{
+    background: #fff;
+}
+.ParentCol li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem;
+    font-size: 14px;
+}
+.ParentCol li+li{
+    border-top: 1px solid #ccc;
+}

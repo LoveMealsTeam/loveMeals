@@ -1,0 +1,8 @@
+.feedback{
+    padding-bottom:1.5rem;
+}
+.submit{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
